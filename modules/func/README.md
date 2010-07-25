@@ -41,13 +41,12 @@ Add the following to your Puppetmaster's manifest
 Add the following to the manifests of all the hosts you want Func to have
 access to (this may also include the Puppetmaster)
 
-    func::minion { $fqdn:
-        master         => "<FQDN or IP of your Puppetmaster>",
-    }
+    func::minion { $fqdn: }
 
 #### Parameters #############################################################
 
- * __master:__ The FQDN or IP of the Func overlord (Puppetmaster)
+ * __master:__ The FQDN or IP of the Func overlord (defaults to 
+  "puppet.${domain}")
  * __func_version:__ The package version that you want to install (defaults
   to "installed")
  * __puppet_ssl_dir:__ The path that puppetd stores it's SSL certificates in

@@ -1,4 +1,6 @@
-define func::minion($master, $func_version=installed, $puppet_ssl_dir="/var/lib/puppet/ssl") {
+define func::minion($master="puppet.${domain}", $func_version=installed, 
+        $puppet_ssl_dir="/var/lib/puppet/ssl") {
+
     package { "func":
         ensure => $func_version,
     }
