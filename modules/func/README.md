@@ -22,7 +22,7 @@ generating new ones for Func).
 
 Add the following to your Puppetmaster's manifest
 
-    func::master { $fqdn:
+    func::overlord { $fqdn:
         listen_address => "<IP address to bind to>",
     }
 

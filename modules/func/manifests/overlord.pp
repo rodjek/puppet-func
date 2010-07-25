@@ -1,4 +1,4 @@
-define func::master($listen_address, $certmaster_version=installed,
+define func::overlord($listen_address, $certmaster_version=installed,
         $puppetmaster_ssl_dir="/var/lib/puppet/ssl") {
 
     package { "certmaster":
