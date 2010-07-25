@@ -42,9 +42,7 @@ Add the following to the manifests of all the hosts you want Func to have
 access to (this may also include the Puppetmaster)
 
     func::minion { $fqdn:
-        master         => "<FQDN or IP of your Puppetmaster>", (required)
-        func_version   => "<version>", (optional)
-        puppet_ssl_dir => "<path>", (optional)
+        master         => "<FQDN or IP of your Puppetmaster>",
     }
 
 #### Parameters #############################################################
