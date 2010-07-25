@@ -14,6 +14,13 @@ generating new ones for Func).
 
 ## Install ##################################################################
 
+Using the awesome puppet-module tool
+
+    # cd /path/to/your/puppet/modules
+    # puppet-module install rodjek-func
+
+By hand:
+
     # cd /path/to/your/puppet/modules
     # git clone git://github.com/rodjek/puppet-func.git func
     # /etc/init.d/puppetmaster restart
