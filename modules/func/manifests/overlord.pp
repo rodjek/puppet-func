@@ -1,6 +1,10 @@
 define func::overlord($listen_address, $certmaster_version=installed,
         $puppetmaster_ssl_dir="/var/lib/puppet/ssl") {
 
+    Exec {
+        path    => ["/sbin", "/usr/sbin", "/bin", "/usr/bin"]
+    }
+
     package { "certmaster":
         ensure => $certmaster_version;
     }
