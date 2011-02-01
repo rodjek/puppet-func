@@ -5,7 +5,7 @@ define func::overlord($listen_address, $certmaster_version=installed,
         ensure => $certmaster_version;
     }
 
-    service { "certmaster":
+    service { $certmaster_service:
         ensure  => "running",
         enable  => "true",
         require => Package["certmaster"],
@@ -33,7 +33,7 @@ define func::overlord($listen_address, $certmaster_version=installed,
     }
     
     Augeas {
-        notify  => Service["certmaster"],
+        notify  => Service[$certmaster_service],
         require => File["/usr/share/augeas/lenses/funccertmaster.aug"],
         context => "/files/etc/certmaster/certmaster.conf/main",
     }
