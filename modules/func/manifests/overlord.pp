@@ -1,3 +1,8 @@
+# Exec needs a default search path or it will throw an unhelpful error
+Exec {
+    path => ["/sbin", "/usr/sbin", "/bin", "/usr/bin"],
+}
+
 define func::overlord($listen_address, $certmaster_version=installed,
         $puppetmaster_ssl_dir="/var/lib/puppet/ssl") {
 
