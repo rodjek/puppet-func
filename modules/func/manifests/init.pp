@@ -2,12 +2,12 @@
 case $operatingsystem {
     /(Debian|Ubuntu/): { 
         $certmaster_service = "certmasterd" 
-    },
+    }
     /(RedHat|CentOS|Fedora)/: { 
         $certmaster_service = "certmaster" 
-    },
+    }
     default: { 
         $certmaster_service = "certmaster" 
-    },
+    }
 }
 
