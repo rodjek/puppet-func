@@ -5,7 +5,7 @@ Exec {
 
 # the certmaster service has a different name under RHEL vs. Debian
 case $operatingsystem {
-    /(Debian|Ubuntu/: { 
+    /(Debian|Ubuntu/): { 
         $certmaster_service = "certmasterd" 
     },
     /(RedHat|CentOS|Fedora)/: { 
