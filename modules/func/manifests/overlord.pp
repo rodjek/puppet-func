@@ -6,6 +6,19 @@ define func::overlord($listen_address, $certmaster_version=installed,
         path => ["/sbin", "/usr/sbin", "/bin", "/usr/bin"],
     }
 
+    # the certmaster service has a different name under RHEL vs. Debian
+    case $operatingsystem {
+        /(Debian|Ubuntu)/: { 
+            $certmaster_service = "certmasterd" 
+        }
+        /(RedHat|CentOS|Fedora)/: { 
+            $certmaster_service = "certmaster" 
+        }
+        default: { 
+            $certmaster_service = "certmaster" 
+        }
+    }
+
     package { "certmaster":
         ensure => $certmaster_version;
     }
