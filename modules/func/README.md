@@ -58,3 +58,7 @@ access to (this may also include the Puppetmaster)
   to "installed")
  * __puppet_ssl_dir:__ The path that puppetd stores it's SSL certificates in
   (defaults to "/var/lib/puppet/ssl")
+
+## Acknowledgements #########################################################
+
+Thanks go to [hakamadare](https://github.com/hakamadare) for the RHEL support
